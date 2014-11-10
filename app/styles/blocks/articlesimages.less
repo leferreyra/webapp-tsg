@@ -1,0 +1,34 @@
+@import "global.less";
+
+.articlesimages {
+
+	padding-top: 10px;
+
+	background-color: @backgroundColor;
+	
+	
+	img{
+		border: 3px solid @primaryColor;
+		float: left;
+		margin: 15px;
+		width: 15%;
+		height: auto;
+		transition-property: margin, border-color;
+		transition-duration: 0.5s;
+		transition-timing-function: ease-out;
+
+		&:hover {
+			margin-top: 2px;
+			border-color: @secondaryColor;
+			margin-bottom: 28px;
+		}
+	}
+
+	@media only screen and (max-width: @screen_small) {
+		
+		img {
+			width: 90%;
+			margin: 4%;
+		}
+	}
+}

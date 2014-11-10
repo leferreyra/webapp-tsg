@@ -1,0 +1,59 @@
+
+// ==================
+// ELEMENTOS GLOBALES
+// ==================
+
+// Aqui se definiran mixins, funciones, y variables globales
+// de LESS para reutilizar en la construccion de bloques
+
+
+/*
+Variables
+=========
+*/
+
+// Considerar cargar estas variables con JS.
+@static_url: "/";
+
+@styles_url: "@{static_url}/styles";
+@images_url: "@{static_url}/img";
+
+
+/*
+Responsive breakpoints
+----------------------
+*/
+@screen_small: 750px;
+@screen_medium: 970px;
+@screen_large: 1170px;
+
+
+/*
+Colores utiles
+--------------
+*/
+@twitter_blue: #55ACEE;
+@facebook_blue: #3B5998;
+
+/*
+TODO: Encontrar una mejor forma de importar font-awesome
+y otras librerias css externas ya que less, no soporta variables
+indirectas aplicadas a sentencias @import.
+*/
+@import "/styles/font-awesome.css";
+
+/*
+Estilos
+=======
+*/
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+.block {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+}

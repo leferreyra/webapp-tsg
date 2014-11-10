@@ -1,0 +1,72 @@
+@import "global.less";
+
+footer{
+	background: @primaryColor;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	box-shadow: -1px -5px 10px @primaryColor;
+	color: #DDD;
+	font-family: 'PT Sans', Arial, sans-serif;
+	height: 250px;
+	margin-top: 5px;
+	width: 100%;
+
+	section:last-child{
+		border-top: 1px solid #DDD;
+		margin-left: 10%;
+		padding-top: 4px;
+		text-align: center;
+		width: 80%;
+	}
+
+	.infoFooter{
+		height: 90%;
+		width: 70%;
+
+		h3{
+			color: @secondaryColor;
+			margin: 0px;
+			padding: 25px 0px 10px 20px;
+		}
+		p{
+			padding-left: 80px;
+		}
+		strong{
+			color: @secondaryColor;
+		}
+	}
+
+	.left{
+		width: 69%;
+	}
+
+	.logoFooter{
+		height: 218px;
+		width: 30%;
+
+		p{
+			background: rgba(0,0,0,0.6);
+			border-radius: 10px;
+			font-size: 50px;
+			padding-top: 75px;
+			height: 125px;
+			margin: 15px;
+			margin-left: 8%;
+			text-align: center;
+			width: 90%;
+		}
+		a{
+			color: #DDD;
+			text-decoration: none;
+		}
+	}
+
+	.right {
+		width: 30%;
+	}
+
+	.left, .right{
+		display: inline-block;
+		vertical-align: top;
+	}
+}

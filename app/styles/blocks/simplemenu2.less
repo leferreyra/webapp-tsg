@@ -1,0 +1,51 @@
+
+@import "simplemenu.less";
+
+.simplemenu2 {
+
+	// Reutilizando estilos del bloque menu con un mixin
+	.simplemenu;
+	background-color: @secondaryColor;
+
+	// Este bloque es igual al bloque menu excepto el
+	// color del fondo
+	ul {
+		
+		a {
+			transition: all 0.2s ease-in;
+			color: @primaryColor;
+
+			&:hover {
+				color: white;
+				background-color: inherit;
+				text-shadow: @primaryColor 0px 0px 20px;
+			}
+		}
+	}
+
+	.logo {
+		color: gray;
+		font-weight: bold;
+		text-shadow: 0px 1px 1px black;
+
+		a {
+			transition: color 0.2s ease-in-out;
+			
+			&:hover {
+				color: white;
+			}
+		}	
+	}
+
+	#logo-social{
+		transition: all 0.2s ease-in;
+		color: @primaryColor;
+		
+		&:hover {
+			color: white;
+			background-color: inherit;
+			text-shadow: @primaryColor 0px 0px 20px;
+		}
+	}
+
+}

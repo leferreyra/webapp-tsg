@@ -1,0 +1,53 @@
+<div class="container">
+	<div id="filtros">
+			<strong>Ordenar por: </strong>
+			<a id="menorPrecio" href="menoresPrecio.html">Menor Precio</a>
+			<a id="mayorPrecio" href="mayoresPrecio.html">Mayor Precio</a>
+			<a id="masAntiguos" href="masAntiguos.html">Más Antiguos</a>
+			<a id="masRecientes" href="masRecientes.html">Más Recientes</a>		
+	</div>
+	
+	<div class= "articulos">
+	{{#articles}}
+		<div class="articulo" onclick="location.href='#/articulo/{{pk}}';">
+			<a href="#/articulo/{{pk}}" id="name">{{fields.nombre}}
+			{{#fields.precio}}
+			- ${{fields.precio}}
+			{{/fields.precio}} 
+			 </a>
+			{{#fields.marca}}
+				<a> <strong>Marca: </strong> {{fields.marca}}<a> 
+			{{/fields.marca}}
+			<img src="media/{{fields.imagen}}">
+			<a id="vermas" href="#/articulo/{{pk}}">Ver más...</a>
+
+			<div class="social">
+				
+				<!-- 
+				Habria que poner estos snippets en templates aparte e importarlos
+				usando el "import" de Mustache. Ej: {{>FBLike}}, {{>Tweet}}
+				-->
+
+				 <!-- facebook-->
+				<div 
+					class="fb-like"
+					data-href="https://developers.facebook.com/docs/plugins/"
+					data-layout="button"
+					data-action="like"
+					data-show-faces="false"
+					data-share="false">
+				</div>
+
+				 <!-- Twitter -->
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mipagina.com/articles/1" data-via="{{twitter}}" data-count="none" data-dnt="true">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</div>
+	</div>
+	{{/articles}}
+	</div>
+
+	{{^articles}}
+		<h1 class="sorry">¡Lo sentimos! Aún no hay nada aquí.</ph1>
+	{{/articles}}
+</div>
+

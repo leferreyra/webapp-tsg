@@ -1,0 +1,13 @@
+<div class="container">
+	<span class="logo">
+		<a href="/">
+			{{logo}}
+		</a>
+	</span>
+	<ul>
+		<li><a href="/">Inicio</a></li>
+		{{#sections}}
+			<li><a href="/section/{{pk}}">{{fields.nombre}}</a></li>
+		{{/sections}}
+	</ul>
+</div>
